@@ -1,123 +1,25 @@
-:root{
-  --ink:#242424;
-  --muted:#747474;
-  --cream:#f7f4ee;
-  --cream2:#f2eee7;
-  --navy:#0d3442;
-  --gold:#cda65a;
-  --soft:#e9e1d5;
-  --white:#fff;
-  --radius:34px;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:#ececec;color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-body::before{content:"";position:fixed;inset:0;background:#e9e9e9;z-index:-2}
-a{color:inherit;text-decoration:none}
-.site-header{width:min(1420px,100%);margin:0 auto;background:var(--navy);height:116px;display:flex;align-items:center;padding:0 clamp(28px,6vw,92px);gap:clamp(40px,8vw,120px);position:sticky;top:0;z-index:10}
-.logo{font-family:Georgia,"Times New Roman",serif;font-size:clamp(46px,4vw,62px);letter-spacing:.03em;color:#fff;line-height:1}
-.nav{display:flex;gap:clamp(30px,5vw,66px);align-items:center;color:#fff;font-size:18px;font-weight:500}
-.section{width:min(1420px,100%);margin:0 auto;background:var(--cream);padding:clamp(72px,9vw,130px) clamp(28px,8vw,110px);text-align:center}
-.compact{padding-top:90px;padding-bottom:90px}
-.eyebrow{text-transform:uppercase;letter-spacing:.28em;font-size:14px;color:#777;margin:0 0 22px}
-h1,h2{font-family:Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:-.04em;line-height:.98;margin:0 auto;color:#222}
-h1{font-size:clamp(46px,6vw,78px)}
-h2{font-size:clamp(38px,5vw,62px);max-width:1120px}
-h3{font-size:22px;margin:0 0 14px;font-weight:520}
-p{font-size:18px;line-height:1.6;color:var(--muted)}
-.lead{font-size:20px;margin:40px 0 34px}
-.button{display:inline-flex;align-items:center;justify-content:center;background:var(--gold);color:#fff;border-radius:12px;padding:17px 28px;font-weight:650;font-size:17px;transition:transform .2s ease,filter .2s ease}
-.button:hover{transform:translateY(-2px);filter:brightness(.98)}
-.hero{padding-top:96px;padding-bottom:0}
-.hero-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:72px;align-items:end}
-.visual,.thumb,.wide-visual,.city,.portrait,.mosaic>div{background:linear-gradient(135deg,#d9cbb8,#f8f2e8);border-radius:var(--radius);overflow:hidden;position:relative;box-shadow:inset 0 0 70px rgba(255,255,255,.38)}
-.visual{height:430px}
-.visual-product::before{content:"";position:absolute;left:18%;bottom:0;width:38%;height:78%;background:linear-gradient(#f6efe5,#d7c5a8);border-radius:26px 26px 8px 8px;box-shadow:0 20px 45px rgba(70,50,30,.15)}
-.visual-product::after{content:"";position:absolute;right:18%;bottom:0;width:22%;height:70%;background:rgba(255,255,255,.32);border:2px solid rgba(255,255,255,.48);border-radius:18px 18px 2px 2px}
-.visual-product span{position:absolute;left:23%;bottom:26%;font-family:Georgia,serif;font-size:34px;color:#2b2b2b}
-.visual-product small{position:absolute;left:22%;bottom:20%;font-family:Georgia,serif;color:#333}
-.visual-capsules{background:
- radial-gradient(ellipse at 45% 65%,rgba(198,154,53,.55) 0 7%,transparent 8%),
- radial-gradient(ellipse at 65% 55%,rgba(198,154,53,.45) 0 6%,transparent 7%),
- radial-gradient(ellipse at 35% 40%,rgba(198,154,53,.45) 0 6%,transparent 7%),
- linear-gradient(135deg,#efe3cf,#fbf7ef)}
-.visual-dna{background:
- repeating-linear-gradient(75deg,transparent 0 35px,rgba(255,255,255,.48) 36px 39px,transparent 40px 75px),
- radial-gradient(circle at 70% 30%,rgba(255,255,255,.9),transparent 22%),
- linear-gradient(135deg,#cbbba1,#fbf8f0)}
-.about p{max-width:720px;margin:22px auto 0}
-.wide-visual{height:330px;margin-top:72px}
-.map-visual{background:
- radial-gradient(circle at 46% 42%,var(--gold) 0 5px,transparent 6px),
- radial-gradient(circle at 57% 36%,var(--gold) 0 5px,transparent 6px),
- radial-gradient(circle at 50% 58%,var(--gold) 0 5px,transparent 6px),
- radial-gradient(circle at 38% 55%,var(--gold) 0 5px,transparent 6px),
- linear-gradient(135deg,#e6d7bf,#f8f3eb)}
-.map-visual::before{content:"";position:absolute;inset:48px 32%;border-radius:45% 35% 48% 40%;background:#d9c29e;box-shadow:0 8px 18px rgba(60,40,20,.08)}
-.capability-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:74px 140px;text-align:left;max-width:870px;margin:80px auto 0}
-.capability-grid p{margin:0;font-size:17px}
-.ecosystem{padding-bottom:120px}
-.statement{font-family:Georgia,serif;font-size:clamp(34px,4.2vw,54px);line-height:1.08;color:#222;max-width:1320px;margin:56px auto 0}
-.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:56px;text-align:left;margin-top:64px}
-.category-card p,.foundation-card p{font-size:17px;margin:0}
-.thumb{height:310px;margin-bottom:24px}
-.thumb-women{background:linear-gradient(135deg,#cab79f,#f4eadc)}
-.thumb-women::after{content:"";position:absolute;right:16%;top:18%;width:28%;height:60%;border-radius:50% 50% 46% 46%;background:#b68d6b;opacity:.55}
-.thumb-longevity{background:
- radial-gradient(ellipse at 45% 65%,rgba(198,154,53,.55) 0 7%,transparent 8%),
- linear-gradient(135deg,#efe2cd,#fbf8ef)}
-.thumb-beauty{background:
- linear-gradient(90deg,transparent 20%,rgba(255,255,255,.52) 21% 27%,transparent 28%),
- linear-gradient(135deg,#d5c0a0,#fbf6eb)}
-.closing-line{font-family:Georgia,serif;font-size:clamp(34px,4vw,56px);line-height:1.08;color:#222;max-width:1230px;margin:62px auto 0}
-.why-spain h2{font-size:clamp(36px,4.4vw,58px)}
-.mosaic{display:grid;grid-template-columns:2fr 1fr;gap:28px;margin-top:62px}
-.mosaic>div{min-height:260px}
-.mosaic-large{min-height:330px}
-.pharmacy{background:linear-gradient(135deg,#d9c7ad,#fff8ed)}
-.barcelona{background:linear-gradient(135deg,#bca079,#f3dfbc)}
-.clinic{background:linear-gradient(135deg,#f4ebdd,#d8c6aa)}
-.woman{background:linear-gradient(135deg,#cab39b,#faf0df)}
-.foundation-card{text-align:center}
-.foundation-card .thumb{height:300px}
-.meeting{background:linear-gradient(135deg,#997b62,#eadcc8)}
-.premium{background:linear-gradient(135deg,#d5c1a5,#f5ecdf)}
-.retail{background:linear-gradient(135deg,#c6b495,#f6ead8)}
-.philosophy{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;align-items:center;text-align:left;max-width:1200px}
-.philosophy h2{margin:0;font-size:clamp(38px,4.7vw,64px)}
-.philosophy p:not(.eyebrow){max-width:560px}
-.portrait{height:490px;border-radius:var(--radius);background:linear-gradient(135deg,#b28e70,#f8ecdb)}
-.operating .steps{display:grid;grid-template-columns:1fr 1.25fr 1fr;gap:64px;align-items:center;margin-top:80px;text-align:left}
-.steps article{padding:28px}
-.steps h3{text-transform:uppercase;font-size:26px;letter-spacing:.02em}
-.steps span{display:flex;align-items:center;justify-content:center;background:var(--gold);color:#fff;border-radius:12px;height:58px;margin-top:38px;font-weight:650}
-.steps .featured{background:var(--gold);border-radius:28px;padding:48px}
-.steps .featured span{background:rgba(255,255,255,.18)}
-.location-grid{display:grid;grid-template-columns:1.3fr .75fr;gap:80px;align-items:center;margin-top:64px;text-align:left}
-.city{height:430px;background:linear-gradient(135deg,#a7835d,#f6e8cf)}
-.details p{font-size:22px;color:#87a6b7}
-.details a{color:#777}
-.cta{width:min(1420px,100%);margin:0 auto;background:var(--navy);padding:92px 28px;text-align:center;color:#fff}
-.cta h2{color:#fff}
-.cta p{max-width:640px;margin:28px auto 42px;color:rgba(255,255,255,.82)}
-.footer{width:min(1420px,100%);margin:0 auto;background:#171717;color:#fff;padding:70px clamp(28px,8vw,110px);display:grid;grid-template-columns:1fr 1fr;gap:40px}
-.footer p,.footer a{color:#8f8f8f}
-.copyright{grid-column:1/-1;border-top:1px solid #444;padding-top:24px}
-@media (max-width:900px){
-  .site-header{height:88px;justify-content:space-between;gap:20px}
-  .nav{font-size:14px;gap:18px}
-  .logo{font-size:42px}
-  .hero-grid,.card-grid,.capability-grid,.mosaic,.philosophy,.operating .steps,.location-grid,.footer{grid-template-columns:1fr}
-  .visual{height:360px}
-  .statement,.closing-line{font-size:34px}
-  .philosophy{text-align:center}
-  .philosophy h2{margin:auto}
-}
-@media (max-width:620px){
-  .site-header{position:relative;height:auto;flex-direction:column;padding:24px}
-  .nav{flex-wrap:wrap;justify-content:center}
-  .section{padding:64px 22px}
-  h1{font-size:42px}
-  h2{font-size:36px}
-  .visual,.thumb,.city,.portrait{height:300px}
-}
+IWP luxury static website
+
+Files:
+- index.html
+- style.css
+- legal.html
+- privacy.html
+- cookies.html
+- assets/ folder
+
+How to update photos:
+1. Add your final images inside /assets
+2. Use these filenames:
+   herocollagen.png
+   heroomega3.png
+   heroadn.png
+   localexecution.png
+   barcelonalifestyle.png
+   medicalconsultation.png
+
+How to upload to GitHub:
+1. Open your GitHub repository.
+2. Upload/replace these files.
+3. Commit changes.
+4. Wait 1-2 minutes for GitHub Pages to refresh.
